@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUME D SAIT AI</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#090d18;color:white;font-family:Arial,sans-serif}
+header{padding:22px;background:#111a2c;text-align:center;border-bottom:1px solid #263653}
+.logo{font-size:27px;font-weight:bold;color:#72a8ff}
+header p{color:#aab6ca}
+main{max-width:700px;margin:auto;padding:20px}
+.welcome{background:#151f34;padding:22px;border-radius:18px;margin-bottom:20px}
+h2{color:#8bb6ff}
+.tools{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tool{background:#151f34;padding:20px;border:1px solid #30415f;border-radius:14px;color:white;font-size:16px;text-align:center}
+.tool span{display:block;font-size:27px;margin-bottom:10px}
+.chat{margin-top:22px;background:#151f34;padding:18px;border-radius:16px}
+#messages{min-height:100px;max-height:300px;overflow:auto;color:#dce7fa}
+input{width:100%;padding:15px;border:1px solid #405477;border-radius:10px;background:#0b1220;color:white;margin:10px 0}
+button{padding:13px;background:#3979ed;color:white;border:0;border-radius:10px;font-weight:bold}
+.send{width:100%}
+footer{text-align:center;color:#8795aa;padding:25px}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">✦ LUME D SAIT AI</div>
+<p>A tua inteligência artificial</p>
+</header>
+<main>
+<section class="welcome">
+<h2>Olá! Bem-vindo à LUME D SAIT AI</h2>
+<p>Descobre novas ideias, aprende e cria com inteligência artificial.</p>
+</section>
+<h2>O que desejas criar?</h2>
+<div class="tools">
+<div class="tool"><span>🖼️</span>Imagens com IA</div>
+<div class="tool"><span>🎬</span>Vídeos com IA</div>
+<div class="tool"><span>🎵</span>Músicas com IA</div>
+<div class="tool"><span>✍️</span>Textos com IA</div>
+</div>
+<section class="chat">
+<h2>Conversar com LUME</h2>
+<div id="messages">Olá! Sou a LUME. Escreve uma mensagem para começar.</div>
+<input id="question" placeholder="Escreve a tua mensagem...">
+<button class="send" onclick="sendMessage()">Enviar mensagem</button>
+</section>
+</main>
+<footer>
+Criado por SAITE MALAQUIAS MUIANGA<br>
+LUME D SAIT AI © 2026
+</footer>
+<script>
+function sendMessage(){
+const q=document.getElementById('question');
+const m=document.getElementById('messages');
+if(!q.value.trim())return;
+m.innerHTML='<p><b>Tu:</b> '+q.value.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))+'</p><p><b>LUME:</b> A interface está a funcionar! A ligação ao motor de inteligência artificial será configurada no próximo passo.</p>';
+q.value='';
+}
+</script>
+</body>
+</html>
